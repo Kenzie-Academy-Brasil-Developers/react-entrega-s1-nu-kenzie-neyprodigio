@@ -1,10 +1,13 @@
-import ".style.css"
+
+import DashBoard from "../Dashboard"
+import { useState } from "react"
+
 const Form = () => {
 
-    const dadosForm = (event) => {
-        event.preventDefault()
+    const [descrip, setDescrip] = useState('')
+    const dadosForm = (e) => {
+        e.preventDefault()
 
-        let dados = event.target
        
         }
     
@@ -12,7 +15,7 @@ const Form = () => {
         <form onSubmit={dadosForm}>
             <div className="form-descr">
                 <label htmlFor="Descrição">Descrição</label>
-                <input type="text" className="input-descr" required placeholder="Digite aqui sua descrição" />
+                <input /* onChange={(e => setDescrip(e.target.value))} */ type="text" className="input-descr" required placeholder="Digite aqui sua descrição" />
                 <span className="span-exemplo">Ex: Compra de roupas</span>
             </div>
 
