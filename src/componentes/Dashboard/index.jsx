@@ -1,32 +1,62 @@
 import { useState } from "react";
-import "./style.css"
-import "../../reset.css"
+import "../../reset.css";
+import "./style.css";
 import Finances from "../Finances";
 import Form from "../Form";
 import TotalMoney from "../TotalMoney";
 
+const DashBoard = ({
+  remove,
+  newArray,
+  setNewArray,
+  list,
+  setList,
+  changeDash,
+  descrip,
+  setDescrip,
+  value,
+  setValue,
+  option,
+  setOption,
+}) => {
+  return (
+    <>
+      <header className="header-dash">
+        <nav>
+          <ul>
+            <li>
+              <p className="title-p">
+                Nu <span className="title-span">Kenzie</span>
+              </p>
+            </li>
+            <li>
+              <button className="btn-nav" onClick={changeDash}>
+                Inicio
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <Form
+        list={list}
+        setList={setList}
+        descrip={descrip}
+        setDescrip={setDescrip}
+        value={value}
+        setValue={setValue}
+        option={option}
+        setOption={setOption}
+      />
+      <TotalMoney list={list} />
+      <Finances
+        remove={remove}
+        newArray={newArray}
+        setNewArray={setNewArray}
+        list={list}
+        setList={setList}
+      />
+    </>
+  );
+};
 
-
-const DashBoard = ({changeDash}) => {
-    return(
-        <>
-            <header className="header-dash">
-                <nav>
-                    <ul>
-                        <li>
-                            <p className="title-p">Nu <span className="title-span">Kenzie</span></p>
-                        </li>
-                        <li>
-                            <button className="btn-nav" onClick={changeDash}>Inicio</button>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-            <Form/>
-            <TotalMoney/>
-            <Finances/>
-        </>
-    )
-}
-
-export default DashBoard
+export default DashBoard;
