@@ -1,21 +1,27 @@
 
 import DashBoard from "../Dashboard"
 import { useState } from "react"
+import "../../reset.css"
+import "./style.css"
 
-const Form = () => {
-
-    const [descrip, setDescrip] = useState('')
-    const dadosForm = (e) => {
+const Form = ({list,setList,descrip, setDescrip, value, setValue, option, setOption}) => {
+ 
+    const dataForm = (e) => {
         e.preventDefault()
-
-       
+        const data = {
+            descrip,
+            value,
+            option
         }
-    
+        setList([...list,data])
+        
+    }
+ 
     return (
-        <form onSubmit={dadosForm}>
+        <form className="form" onSubmit={dataForm}>
             <div className="form-descr">
-                <label htmlFor="Descrição">Descrição</label>
-                <input /* onChange={(e => setDescrip(e.target.value))} */ type="text" className="input-descr" required placeholder="Digite aqui sua descrição" />
+                <label className="descricao" htmlFor="descrição">Descrição</label>
+                <input className="input-descr" onChange={(e => setDescrip(e.target.value))} type="text" required placeholder="Digite aqui sua descrição" />
                 <span className="span-exemplo">Ex: Compra de roupas</span>
             </div>
 
@@ -26,15 +32,15 @@ const Form = () => {
                 </section>
 
                 <section className="input-campo">
-                    <input type="number" placeholder="1 R$" required id="valor" />
-                    <select name="tipo" id="valorTipo">
-                        <option value="">Entrada</option>
-                        <option value="">Saida</option>
+                    <input className="input-value" onChange={(e => setValue(Number(e.target.value)))} type="number" placeholder="1 R$" required id="valor" />
+                    <select onChange={(e => setOption(e.target.value))} className="select" name="tipo" id="valorTipo">
+                        <option value="Entrada">Entrada</option>
+                        <option value="Saida">Saida</option>
                     </select>
                 </section>
             </div>
 
-            <button type="submit">Insira o valor</button>
+            <button className="btn-form" type="submit">Inserir o valor</button>
         </form>
     )
 }

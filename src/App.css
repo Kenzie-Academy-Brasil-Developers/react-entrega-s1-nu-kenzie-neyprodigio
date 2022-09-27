@@ -28,13 +28,13 @@
 }
 
 .title-p {
-  color: var(--rosa-primary);
+  color: var(--rosa-secundary);
 
   font-size: var(--title1);
   font-weight: 500;
 }
 
-.title-span {
+.title-span1 {
   color: #fff;
 
 }

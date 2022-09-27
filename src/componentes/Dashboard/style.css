@@ -1,15 +1,37 @@
 .header-dash {
-    width: 100%;
+    width: 100vw;
     height: 60px;
 
-    background: rebeccapurple;
+}
+
+.header-dash nav {
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-dash nav ul {
+    width: 90%;
+
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .title-p {
-    color: var(--rosa-primary);
+    color: var(--rosa-secundary);
 
-    font-size: var(--title1);
+    font-size: 1.5rem;
     font-weight: 500;
+}
+
+.title-span {
+    color: var(--cinza-4);
+
+    font-size: 1.5rem;
+
 }
 
 .btn-nav {
@@ -26,11 +48,54 @@
 }
 .header-dash nav {
     width: 100%;
-    padding: 1rem;
+    height: 100%;
 }
 .header-dash ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+
+    border-bottom: 2px solid var(--cinza-1);
+
+    padding: 0.5rem;
+}
+
+.main-container {
+    width: 100%;
+
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-left {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-rigth {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media (min-width: 720px) {
+    .main-container {
+        flex-direction: row;
+        gap: 0.7rem;
+        margin-top: 15px;
+
+    }
+    
 }
 
