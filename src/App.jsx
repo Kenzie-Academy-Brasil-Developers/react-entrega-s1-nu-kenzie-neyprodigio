@@ -6,6 +6,7 @@ import DashBoard from "./componentes/Dashboard";
 
 const App = () => {
   const [list, setList] = useState([]);
+  const [filter, setFilter] = useState("")
   const [newArray, setNewArray] = useState([...list]);
   const [descrip, setDescrip] = useState("");
   const [value, setValue] = useState("");
@@ -18,7 +19,7 @@ const App = () => {
 
   useEffect(() =>{
     setNewArray(list);
-    console.log(newArray);
+    console.log(list);
   }, [list]);
   
   const remove = (click) => {
@@ -60,6 +61,8 @@ const App = () => {
         </div>
       ) : (
         <DashBoard
+          filter={filter}
+          setFilter={setFilter}
           remove={remove}
           newArray={newArray}
           setNewArray={setNewArray}

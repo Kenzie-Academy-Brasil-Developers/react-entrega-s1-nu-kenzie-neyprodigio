@@ -10,6 +10,8 @@ const DashBoard = ({
   newArray,
   setNewArray,
   list,
+  filter,
+  setFilter,
   setList,
   changeDash,
   descrip,
@@ -58,6 +60,8 @@ const DashBoard = ({
           remove={remove}
           newArray={newArray}
           setNewArray={setNewArray}
+          filter={filter}
+          setFilter={setFilter}
           list={list}
           setList={setList}
         />

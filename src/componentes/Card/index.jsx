@@ -4,6 +4,7 @@ import imgTrash from "../../assets/trash.png";
 import { useEffect } from "react";
 
 const Card = ({ list, setList, newArray, setNewArray, remove }) => {
+
   
 
   return (
