@@ -8,15 +8,18 @@
 
 .main {
   width: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   gap: 1rem;
 }
 
 .info-home {
-  width: 50%;
+  width: 40%;
   height: 24rem;
 
   display: flex;
@@ -42,10 +45,16 @@
 .text-center {
   color: #fff;
 
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   width: 7rem;
 
+}
+
+@media (min-width:500px) {
+  .text-center {
+    font-size: 2rem;
+  }
 }
 
 .text-footer {
@@ -55,7 +64,7 @@
 }
 
 .btn-iniciar {
-  width: 10rem;
+  width: 9rem;
   height: 2rem;
 
   background: var(--rosa-primary);
@@ -67,8 +76,24 @@
 
 .img-section {
   width: 40%;
-  height: 15rem;
+  height: 20rem;
   
+}
+
+@media (min-width:720px) {
+  .img-section {
+    width: 40%;
+    height: 20rem;
+    
+  }
+}
+
+@media (min-width:1024px) {
+  .img-section {
+    width: 40%;
+    height: 70%;
+    
+  }
 }
 
 .img-rigth {
